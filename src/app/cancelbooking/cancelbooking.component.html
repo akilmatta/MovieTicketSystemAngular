@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-2">
+    <table class="table table-striped" *ngIf="bookedDetails && bookedDetails.length>0">
+      <tr>
+        <th scope="col">BookingId</th>
+        <th scope="col">City</th>
+        <th scope="col">TheatreId</th>
+        <th scope="col">MovieId</th>
+        <th scope="col">ShowId</th>
+        <th scope="col">No.Of Seats</th>
+        <th scope="col">Date-Time</th>
+        <th scope="col">Action</th>
+      </tr>
+      <tbody>
+        <tr *ngFor="let b of bookedDetails">
+          <td>{{b.bookingId}}</td>
+          <td>{{b.city}}</td>
+          <td>{{b.theatreId}}</td>
+          <td>{{b.movieId}}</td>
+          <td>{{b.showId}}</td>
+          <td>{{b.numOfSeat}}</td>
+          <td>{{b.dateandtime}}</td>
+          <td><button class="btn btn-danger" (click)="deleteBooking(b.bookingId)"> Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

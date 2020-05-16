@@ -1,0 +1,41 @@
+<div class="container">
+    <form #userForm="ngForm" (ngSubmit)='onSubmit(userForm.value)'>
+
+        <div class="form-group col-4">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="City" [(ngModel)]="book.city" name="city">
+        </div> 
+
+        <div class="form-group col-4">
+            <label for="theatreid">Theatre Id</label>
+            <input type="text" class="form-control" id="theatreid" placeholder="theatreid" [(ngModel)]="book.theatreId" name="theatreId">
+        </div> 
+
+      <div class="form-group col-4">
+          <label for="movieid">Movie Id</label>
+          <input type="text" class="form-control" id="movieid" placeholder="movieid" [(ngModel)]="book.movieId" name="movieId">
+      </div>   
+
+        <div class="form-group col-4">
+              <label for="email">Show Id</label>
+              <input type="text" class="form-control" id="showid" placeholder="showid" [(ngModel)]="book.showId" name="showId">
+        </div>
+
+        <div class="form-group col-10">
+            <label for="dateandtime" class="col-2 col-form-label">Date and time</label>
+           
+              <input class="form-control col-5" type="datetime" placeholder="yyyy-mm-dd hh:mm" value="2011-08-19T13:45:00" id="dateandtime" [(ngModel)]="book.dateandtime" name="dateandtime">
+            
+        </div> 
+          <div class="form-group col-4">
+              <label for="seats">No.of seats</label>
+              <input type="text" class="form-control " id="movie" placeholder="seats" [(ngModel)]="book.numOfSeat" name="numOfSeat">
+          </div>
+         
+          <div>
+              <input [disabled]="userForm.invalid" type="submit" value="Submit" class="btn btn-lg btn-primary btn-block text-uppercase">
+             <!-- <button type="submit" class="btn btn-outline-primary">Submit</button>-->
+          </div>       
+          
+    </form>
+  </div>
